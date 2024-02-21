@@ -1,0 +1,10 @@
+<div *ngIf="mss.msgs.length">
+    <h2>Messages</h2>
+    <button type="button" class="clear" (click)="mss.clear()">Clear Messages</button>
+
+    <div  class="scroller">
+    <div *ngFor="let message of mss.msgs">
+        {{message}}
+    </div>
+</div>
+</div>

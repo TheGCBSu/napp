@@ -1,0 +1,8 @@
+.scroller{
+    overflow-y: auto;
+    max-height: 20vh;
+    scroll-snap-type: y mandatory;
+}
+.scroller div{
+    scroll-snap-align: center;
+}

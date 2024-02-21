@@ -1,0 +1,40 @@
+.des{
+    color: red;
+}
+.selectedHero{
+    color:white;
+    border-color:blue;
+    background-color: black;
+    transition-duration: 0.2s;
+
+}
+.selectedHero:hover{
+    color:white;
+    background-color: black;
+    border-color: red;
+}
+button{
+    background-color: transparent;
+    width: 20%;
+    text-align: left;
+    transition-duration: 0.2s;
+    color: #369;    
+    border-color: blue;
+    border-width:3px;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+    border-color: black;
+}
+ol{
+    list-style-position: inside;
+}
+.scroller{
+    overflow-y: auto;
+    max-height: 25vh;
+    scroll-snap-type: y mandatory;
+}
+.scroller div{
+    scroll-snap-align: center;
+}

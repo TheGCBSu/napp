@@ -1,0 +1,15 @@
+<div>
+    <div class="scroller">
+    <ol class="des" *ngIf="heroes.length !==0">
+        <div *ngFor="let Hero of heroes">
+        <button type="button" [class.selectedHero]="Hero === selected" (click)="View(Hero)">
+            <li >
+                    {{Hero.name}}
+            </li>
+        </button>
+        </div>
+            <button type="button" (click)="clearView()"><li>Clear Selection</li></button>
+    </ol>
+</div>
+    <app-hero-detail [selected]="selected"/>
+</div>
