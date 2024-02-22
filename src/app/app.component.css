@@ -49,3 +49,6 @@ button:disabled {
   overflow-y: auto;
   max-height: 20vh;
 }
+.sep {
+  margin: 0 5vh;
+}

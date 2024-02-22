@@ -1,0 +1,7 @@
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <a class="sep" *ngFor="let hero of heroes" routerLink="/Detail/{{ hero.id }}">
+    {{ hero.name }}
+  </a>
+  <button (click)="refreshHeroes()" class="sep">Reload</button>
+</div>

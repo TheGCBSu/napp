@@ -5,14 +5,19 @@ import { Observable, of } from 'rxjs';
 import { MessagesService } from './messages.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroService {
-
-  getHeroes():Observable<Hero[]>{
-    const heroes =  of(HEROES);
+  getHeroes(): Observable<Hero[]> {
+    const heroes = of(HEROES);
     this.mss.add('HeroService: fetched heroes');
     return heroes;
   }
-  constructor(private mss:MessagesService) { }
+
+  getHero(id: number): Observable<Hero> {
+    const hero = HEROES.find((h) => h.id === id)!;
+    this.mss.add(`HeroService: fetched hero id=${id}`);
+    return of(hero);
+  }
+  constructor(private mss: MessagesService) {}
 }
